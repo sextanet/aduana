@@ -1,10 +1,10 @@
-# Bidirectional channel to encrypt and decypt data
+# Aduana
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sextanet/aduana.svg?style=flat-square)](https://packagist.org/packages/sextanet/aduana)
 [![Tests](https://img.shields.io/github/actions/workflow/status/sextanet/aduana/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/sextanet/aduana/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/sextanet/aduana.svg?style=flat-square)](https://packagist.org/packages/sextanet/aduana)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+Bidirectional channel to encrypt and decypt data.
 
 ## Support us
 

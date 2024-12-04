@@ -3,7 +3,10 @@
     "description": "Bidirectional channel to encrypt and decypt data",
     "keywords": [
         "sextanet",
-        "aduana"
+        "aduana",
+        "easy",
+        "encrypt",
+        "decrypt"
     ],
     "homepage": "https://github.com/sextanet/aduana",
     "license": "MIT",
@@ -15,7 +18,7 @@
         }
     ],
     "require": {
-        "php": "^8.4"
+        "php": "^8.2"
     },
     "require-dev": {
         "pestphp/pest": "^3.0",
