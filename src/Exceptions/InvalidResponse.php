@@ -6,5 +6,5 @@ use Exception;
 
 class InvalidResponse extends Exception
 {
-    public $message = "Check your password or content";
+    public $message = 'Check your password or content';
 }
