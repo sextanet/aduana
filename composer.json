@@ -1,0 +1,49 @@
+{
+    "name": "sextanet/aduana",
+    "description": "Bidirectional channel to encrypt and decypt data",
+    "keywords": [
+        "sextanet",
+        "aduana"
+    ],
+    "homepage": "https://github.com/sextanet/aduana",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SextaNet",
+            "email": "dev@sextanet.cl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.4"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "laravel/pint": "^1.0",
+        "spatie/ray": "^1.28"
+    },
+    "autoload": {
+        "psr-4": {
+            "SextaNet\\Aduana\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SextaNet\\Aduana\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+            "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
