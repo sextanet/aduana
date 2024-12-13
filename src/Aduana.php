@@ -38,12 +38,12 @@ class Aduana extends Magic
         return json_decode($decrypt, true);
     }
 
-    public static function 🔒(string $password): string
+    public static function 🔒($password): string
     {
         return self::encrypt($password);
     }
 
-    public static function 🔓(string $password)
+    public static function 🔓($password)
     {
         return self::decrypt($password);
     }
