@@ -19,28 +19,28 @@ composer require sextanet/aduana
 ## Usage (encrypt data)
 
 ```php
-// First step: set a password
+// Step 1: set a password
 \SextaNet\Aduana\Aduana::setPassword('yourSecurePassword');
 
-// Second step: encrypt your data
+// Step 2: encrypt your data
 return \SextaNet\Aduana\Aduana::encrypt('hello, from Aduana (:');
 ```
 
 Returns encrypted text, like this:
-dWSNOkN6mqxeCH0v3mzbWlJxRDJWTGE1WUxSQnN1eVNlbCtuNzdlOTFWSDUybFJIYVluNGNDMFZ4ajQ9
+`dWSNOkN6mqxeCH0v3mzbWlJxRDJWTGE1WUxSQnN1eVNlbCtuNzdlOTFWSDUybFJIYVluNGNDMFZ4ajQ9`
 
 ## Usage (decrypt data)
 
 ```php
-// First step: set a password
+// Step 1: set a password
 \SextaNet\Aduana\Aduana::setPassword('yourSecurePassword');
 
-// Second step: decrypt your data
+// Step 2: decrypt your data
 return \SextaNet\Aduana\Aduana::decrypt('dWSNOkN6mqxeCH0v3mzbWlJxRDJWTGE1WUxSQnN1eVNlbCtuNzdlOTFWSDUybFJIYVluNGNDMFZ4ajQ9');
 ```
 
 Returns your original text:
-hello, from Aduana (:
+`hello, from Aduana (:`
 
 ## Testing
 
