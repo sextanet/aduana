@@ -25,7 +25,7 @@ composer require sextanet/aduana
 // Second step: encrypt your data
 return \SextaNet\Aduana\Aduana::encrypt('hello, from Aduana (:');
 
-// It will return encrypted text, like this: dWSNOkN6mqxeCH0v3mzbWlJxRDJWTGE1WUxSQnN1eVNlbCtuNzdlOTFWSDUybFJIYVluNGNDMFZ4ajQ9
+// Returns encrypted text, like this: dWSNOkN6mqxeCH0v3mzbWlJxRDJWTGE1WUxSQnN1eVNlbCtuNzdlOTFWSDUybFJIYVluNGNDMFZ4ajQ9
 ```
 
 ## Usage (decrypt data)
@@ -37,7 +37,7 @@ return \SextaNet\Aduana\Aduana::encrypt('hello, from Aduana (:');
 // Second step: decrypt your data
 return \SextaNet\Aduana\Aduana::decrypt('dWSNOkN6mqxeCH0v3mzbWlJxRDJWTGE1WUxSQnN1eVNlbCtuNzdlOTFWSDUybFJIYVluNGNDMFZ4ajQ9');
 
-// It will return your original text: hello, from Aduana (:
+// Returns your original text: hello, from Aduana (:
 ```
 
 ## Testing
