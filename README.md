@@ -4,7 +4,9 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/sextanet/aduana/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/sextanet/aduana/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/sextanet/aduana.svg?style=flat-square)](https://packagist.org/packages/sextanet/aduana)
 
-Bidirectional channel to encrypt and decypt data.
+A easy-way, bidirectional channel to encrypt and decypt data
+
+> The original name Aduana is inspired by [@uppercod's aduana](https://packagist.org/packages/uppercod/aduana)
 
 ## Installation
 
@@ -14,28 +16,64 @@ You can install the package via composer:
 composer require sextanet/aduana
 ```
 
-## Usage (encrypt data)
+## Basic usage
+
+### Encrypt text
 
 ```php
-// First step: set a password
+// Step 1: set a password
 \SextaNet\Aduana\Aduana::setPassword('yourSecurePassword');
 
-// Second step: encrypt your data
+// Step 2: encrypt your data
 return \SextaNet\Aduana\Aduana::encrypt('hello, from Aduana (:');
-
-// It will return encrypted text, like this: dWSNOkN6mqxeCH0v3mzbWlJxRDJWTGE1WUxSQnN1eVNlbCtuNzdlOTFWSDUybFJIYVluNGNDMFZ4ajQ9
 ```
 
-## Usage (decrypt data)
+Returns encrypted text, like this:
+`dWSNOkN6mqxeCH0v3mzbWlJxRDJWTGE1WUxSQnN1eVNlbCtuNzdlOTFWSDUybFJIYVluNGNDMFZ4ajQ9`
+
+### Decrypt text
 
 ```php
-// First step: set a password
+// Step 1: set a password
 \SextaNet\Aduana\Aduana::setPassword('yourSecurePassword');
 
-// Second step: decrypt your data
+// Step 2: decrypt your data
 return \SextaNet\Aduana\Aduana::decrypt('dWSNOkN6mqxeCH0v3mzbWlJxRDJWTGE1WUxSQnN1eVNlbCtuNzdlOTFWSDUybFJIYVluNGNDMFZ4ajQ9');
+```
 
-// It will return your original text: hello, from Aduana (:
+Returns your original text:
+`hello, from Aduana (:`
+
+## Advanced usage
+
+You can also encrypt complex structures like arrays. With the same syntax to encrypt and decrypt 😎
+
+### Encrypt an array
+
+```php
+\SextaNet\Aduana\Aduana::setPassword('yourSecurePassword');
+
+$array = [
+    'your-complex-array' => [
+        'another-level' => [
+            'yes' => [
+                'it works!' => [
+                    'no problem!',
+                ]
+            ]
+        ]
+    ]
+];
+
+return \SextaNet\Aduana\Aduana::encrypt($array);
+```
+
+### Decrypt an array
+
+```php
+$decrypted_array = \SextaNet\Aduana\Aduana::decrypt('zwKOVw6zX2Jp8gNdQuE6TWRyNUR4MFFpN2lVaGIyeHZBMUljQXA1d2VuYjFZR3RKVkkzNC9HR25RampMUEQrSTdRbHVOT3VUU2hDL04rVXErSVNRL0FvTlAyMjRWa1pRVjdRS1RuSTFvRFBkRHVjMm9Pbm0ySnVnNnJVPQ==');
+
+var_dump($decrypted_array);
 ```
 
 ## Testing

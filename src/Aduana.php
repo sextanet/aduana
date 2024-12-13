@@ -35,6 +35,6 @@ class Aduana extends Magic
             throw new InvalidResponse;
         }
 
-        return json_decode($decrypt);
+        return json_decode($decrypt, true);
     }
 }
