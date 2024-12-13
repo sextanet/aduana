@@ -20,10 +20,15 @@ abstract class Magic
         self::$PASSWORD = null;
     }
 
-    public static function checkPassword()
+    public static function checkPassword(): void
     {
         if (is_null(self::$PASSWORD)) {
             throw new MissingPassword;
         }
+    }
+
+    public static function 🔑(string $password): void
+    {
+        self::setPassword($password);
     }
 }
