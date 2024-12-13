@@ -4,7 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/sextanet/aduana/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/sextanet/aduana/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/sextanet/aduana.svg?style=flat-square)](https://packagist.org/packages/sextanet/aduana)
 
-A easy-way, bidirectional channel to encrypt and decypt data
+A easy-way, bidirectional channel to encrypt and decrypt data
 
 > The original name Aduana is inspired by [@uppercod's aduana](https://packagist.org/packages/uppercod/aduana)
 
@@ -19,6 +19,9 @@ composer require sextanet/aduana
 ## Basic usage
 
 ### Encrypt text
+
+> [!NOTE]
+> Since version 1.0.3, the password needs to be at least 10 characters
 
 ```php
 // Step 1: set a password
