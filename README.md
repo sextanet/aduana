@@ -18,10 +18,10 @@ composer require sextanet/aduana
 
 ## Basic usage
 
-### Encrypt text
-
 > [!NOTE]
 > Since version 1.0.3, the password needs to be at least 10 characters
+
+### Encrypt text
 
 ```php
 // Step 1: set a password
