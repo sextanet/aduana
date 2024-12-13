@@ -38,3 +38,12 @@ it("can't decrypt with an invalid password", function () {
 
     Aduana::decrypt('Fvt2y2Q1Y26c1oh1Zr1YpXR2KzJKVlYyZzd5OUFpdEUyNi91MkR1UTMvMmtSbnVtWXhYVk5FU2Z2VWs9');
 })->expectException(InvalidResponse::class);
+
+it('can decrypt with emojis', function () {
+    Aduana::🔑('verySecretPassword');
+
+    $encrypted = Aduana::🔓('Fvt2y2Q1Y26c1oh1Zr1YpXR2KzJKVlYyZzd5OUFpdEUyNi91MkR1UTMvMmtSbnVtWXhYVk5FU2Z2VWs9');
+
+    expect($encrypted)
+        ->toBe('Hello, from Aduana!');
+});

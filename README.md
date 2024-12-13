@@ -76,6 +76,28 @@ $decrypted_array = \SextaNet\Aduana\Aduana::decrypt('zwKOVw6zX2Jp8gNdQuE6TWRyNUR
 var_dump($decrypted_array);
 ```
 
+## Emojis (new)
+
+Aduana supports three emojis:
+
+### Set password
+
+```php
+Aduana::🔑('verySecretPassword');
+```
+
+### Encrypt
+
+```php
+Aduana::🔒('Hello, from Aduana!');
+```
+
+### Decrypt
+
+```php
+Aduana::🔓('Fvt2y2Q1Y26c1oh1Zr1YpXR2KzJKVlYyZzd5OUFpdEUyNi91MkR1UTMvMmtSbnVtWXhYVk5FU2Z2VWs9');
+```
+
 ## Testing
 
 ```bash
