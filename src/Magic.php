@@ -3,6 +3,7 @@
 namespace SextaNet\Aduana;
 
 use SextaNet\Aduana\Exceptions\MissingPassword;
+use SextaNet\Aduana\Exceptions\TooShortPassword;
 
 abstract class Magic
 {
@@ -12,6 +13,10 @@ abstract class Magic
 
     public static function setPassword(string $password): void
     {
+        if (strlen($password) < 10) {
+            throw new TooShortPassword;
+        }
+
         self::$PASSWORD = $password;
     }
 
