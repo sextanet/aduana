@@ -16,7 +16,9 @@ You can install the package via composer:
 composer require sextanet/aduana
 ```
 
-## Usage (encrypt data)
+## Basic usage
+
+### Encrypt text
 
 ```php
 // Step 1: set a password
@@ -29,7 +31,7 @@ return \SextaNet\Aduana\Aduana::encrypt('hello, from Aduana (:');
 Returns encrypted text, like this:
 `dWSNOkN6mqxeCH0v3mzbWlJxRDJWTGE1WUxSQnN1eVNlbCtuNzdlOTFWSDUybFJIYVluNGNDMFZ4ajQ9`
 
-## Usage (decrypt data)
+### Decrypt text
 
 ```php
 // Step 1: set a password
@@ -41,6 +43,38 @@ return \SextaNet\Aduana\Aduana::decrypt('dWSNOkN6mqxeCH0v3mzbWlJxRDJWTGE1WUxSQnN
 
 Returns your original text:
 `hello, from Aduana (:`
+
+## Advanced usage
+
+You can also encrypt complex structures like arrays. With the same syntax to encrypt and decrypt 😎
+
+### Encrypt an array
+
+```php
+\SextaNet\Aduana\Aduana::setPassword('yourSecurePassword');
+
+$array = [
+    'your-complex-array' => [
+        'another-level' => [
+            'yes' => [
+                'it works!' => [
+                    'no problem!',
+                ]
+            ]
+        ]
+    ]
+];
+
+return \SextaNet\Aduana\Aduana::encrypt($array);
+```
+
+### Decrypt an array
+
+```php
+$decrypted_array = \SextaNet\Aduana\Aduana::decrypt('zwKOVw6zX2Jp8gNdQuE6TWRyNUR4MFFpN2lVaGIyeHZBMUljQXA1d2VuYjFZR3RKVkkzNC9HR25RampMUEQrSTdRbHVOT3VUU2hDL04rVXErSVNRL0FvTlAyMjRWa1pRVjdRS1RuSTFvRFBkRHVjMm9Pbm0ySnVnNnJVPQ==');
+
+var_dump($decrypted_array);
+```
 
 ## Testing
 
