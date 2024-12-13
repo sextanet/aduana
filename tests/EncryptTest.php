@@ -35,10 +35,22 @@ it('can encrypt an array', function () {
         ]);
 });
 
-it('can encrypt with emojis', function () {
+it('can encrypt text with emojis', function () {
     Aduana::🔑('verySecretPassword');
 
     $encrypted = Aduana::🔒('Hello, from Aduana!');
+
+    expect($encrypted)->not
+        ->toBe('Hello, from Aduana!');
+});
+
+it('can encrypt array with emojis', function () {
+    Aduana::🔑('verySecretPassword');
+
+    $encrypted = Aduana::🔒([
+        'name' => 'Aduana',
+        'date' => '2024-12-13',
+    ]);
 
     expect($encrypted)->not
         ->toBe([
