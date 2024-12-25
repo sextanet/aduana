@@ -4,7 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/sextanet/aduana/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/sextanet/aduana/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/sextanet/aduana.svg?style=flat-square)](https://packagist.org/packages/sextanet/aduana)
 
-A easy-way, bidirectional channel to encrypt and decrypt data
+A robust and easy-to-use package with bidirectional support to encrypt and decrypt data with AES-256-CBC.
 
 > The original name Aduana is inspired by [@uppercod's aduana](https://packagist.org/packages/uppercod/aduana)
 
