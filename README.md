@@ -101,6 +101,28 @@ Aduana::🔒('Hello, from Aduana!');
 Aduana::🔓('Fvt2y2Q1Y26c1oh1Zr1YpXR2KzJKVlYyZzd5OUFpdEUyNi91MkR1UTMvMmtSbnVtWXhYVk5FU2Z2VWs9');
 ```
 
+## Functions
+
+If you don't want to use PSR-4 and their imports, you can also use functions
+
+### Set password
+
+```php
+aduana_password('verySecretPassword');
+```
+
+### Encrypt
+
+```php
+aduana_encrypt('Hello, from Aduana!');
+```
+
+### Decrypt
+
+```php
+aduana_decrypt('Fvt2y2Q1Y26c1oh1Zr1YpXR2KzJKVlYyZzd5OUFpdEUyNi91MkR1UTMvMmtSbnVtWXhYVk5FU2Z2VWs9');
+```
+
 ## Testing
 
 ```bash

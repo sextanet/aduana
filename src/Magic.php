@@ -20,6 +20,11 @@ abstract class Magic
         self::$PASSWORD = $password;
     }
 
+    public static function hasPassword(): bool
+    {
+        return ! is_null(self::$PASSWORD);
+    }
+
     public static function unsetPassword(): void
     {
         self::$PASSWORD = null;
